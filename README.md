@@ -1,3 +1,3 @@
-# Pokemon
+# Pokémon
 
-Clone this project and add pokemons to the list :)
+Clone this project and add pokémons to the list :)
