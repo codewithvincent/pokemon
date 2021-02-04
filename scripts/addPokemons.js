@@ -10,6 +10,7 @@ const pokemons = [
     type: ["Grass", "Poison"],
     weight: 6.9,
     link: "http://pokemondb.net/pokedex/bulbasaur",
+    addedBy: "vincentvvv",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const pokemons = [
     type: ["Grass", "Poison"],
     weight: 13,
     link: "http://pokemondb.net/pokedex/ivysaur",
+    addedBy: "vincentvvv",
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ const pokemons = [
     type: ["Grass", "Poison"],
     weight: 100,
     link: "http://pokemondb.net/pokedex/venusaur",
+    addedBy: "vincentvvv",
   },
 ];
 
@@ -37,9 +40,10 @@ const SPRITE = "sprite";
 const NAME = "name";
 const TYPE = "type";
 const WEIGHT = "weight";
+const ADDED_BY = "addedBy";
 const LINK = "link";
 
-const fields = [ID, SPRITE, NAME, TYPE, WEIGHT];
+const fields = [ID, SPRITE, NAME, TYPE, WEIGHT, ADDED_BY];
 const table = document.getElementById("pokemonTable");
 
 pokemons
@@ -53,7 +57,7 @@ pokemons
     const row = table.insertRow(index + 1);
 
     let innerHTML = "";
-    fields.forEach((key, keyIndex) => {
+    fields.forEach((key) => {
       let value = pokemon[key];
 
       switch (key) {
@@ -68,6 +72,9 @@ pokemons
           break;
         case WEIGHT:
           value = `${value}kg`;
+          break;
+        case ADDED_BY:
+          value = `<a href="https://github.com/${value}" target="_blank">${value}</a>`;
           break;
       }
 
