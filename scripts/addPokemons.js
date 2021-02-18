@@ -30,6 +30,15 @@ const pokemons = [
     link: "http://pokemondb.net/pokedex/venusaur",
     addedBy: "vincentvvv",
   },
+  {
+    id: 4,
+    sprite: "https://img.pokemondb.net/sprites/black-white/normal/charmander.png",
+    name: "Charmander",
+    type: ["Fire"],
+    weight: 8.5,
+    link: "https://pokemondb.net/pokedex/charmander",
+    addedBy: "deechow",
+  },
 ];
 
 /* 
