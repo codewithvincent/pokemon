@@ -1,6 +1,7 @@
 /* 
   Add your pokemon to this list
 */
+
 const pokemons = [
   {
     id: 1,
