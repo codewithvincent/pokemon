@@ -32,7 +32,8 @@ const pokemons = [
   },
   {
     id: 4,
-    sprite: "https://img.pokemondb.net/sprites/black-white/normal/charmander.png",
+    sprite:
+      "https://img.pokemondb.net/sprites/black-white/normal/charmander.png",
     name: "Charmander",
     type: ["Fire"],
     weight: 8.5,
@@ -41,7 +42,8 @@ const pokemons = [
   },
   {
     id: 5,
-    sprite: "https://img.pokemondb.net/sprites/black-white/normal/charmeleon.png",
+    sprite:
+      "https://img.pokemondb.net/sprites/black-white/normal/charmeleon.png",
     name: "Charmeleon",
     type: ["Fire"],
     weight: 19,
@@ -50,7 +52,8 @@ const pokemons = [
   },
   {
     id: 6,
-    sprite: "https://img.pokemondb.net/sprites/black-white/normal/charizard.png",
+    sprite:
+      "https://img.pokemondb.net/sprites/black-white/normal/charizard.png",
     name: "Charizard",
     type: ["Fire", "Flying"],
     weight: 90.5,
@@ -68,7 +71,8 @@ const pokemons = [
   },
   {
     id: 8,
-    sprite: "https://img.pokemondb.net/sprites/black-white/normal/wartortle.png",
+    sprite:
+      "https://img.pokemondb.net/sprites/black-white/normal/wartortle.png",
     name: "Wartortle",
     type: ["Water"],
     weight: 22.5,
@@ -77,7 +81,8 @@ const pokemons = [
   },
   {
     id: 9,
-    sprite: "https://img.pokemondb.net/sprites/black-white/normal/blastoise.png",
+    sprite:
+      "https://img.pokemondb.net/sprites/black-white/normal/blastoise.png",
     name: "Blastoise",
     type: ["Water"],
     weight: 85.5,
@@ -104,7 +109,8 @@ const pokemons = [
   },
   {
     id: 12,
-    sprite: "https://img.pokemondb.net/sprites/black-white/normal/butterfree.png",
+    sprite:
+      "https://img.pokemondb.net/sprites/black-white/normal/butterfree.png",
     name: "Butterfree",
     type: ["Bug"],
     weight: 32,
@@ -115,7 +121,7 @@ const pokemons = [
     id: 13,
     sprite: "https://img.pokemondb.net/sprites/black-white/normal/weedle.png",
     name: "Weedle",
-    type: ["Bug","Poison"],
+    type: ["Bug", "Poison"],
     weight: 3.2,
     link: "https://pokemondb.net/pokedex/weedle",
     addedBy: "deechow",
@@ -124,7 +130,7 @@ const pokemons = [
     id: 14,
     sprite: "https://img.pokemondb.net/sprites/black-white/normal/kakuna.png",
     name: "Kakuna",
-    type: ["Bug","Poison"],
+    type: ["Bug", "Poison"],
     weight: 10,
     link: "https://pokemondb.net/pokedex/kakuna",
     addedBy: "deechow",
@@ -133,7 +139,7 @@ const pokemons = [
     id: 15,
     sprite: "https://img.pokemondb.net/sprites/black-white/normal/beedrill.png",
     name: "Beedrill",
-    type: ["Bug","Poison"],
+    type: ["Bug", "Poison"],
     weight: 29.5,
     link: "https://pokemondb.net/pokedex/beedrill",
     addedBy: "deechow",
@@ -142,16 +148,17 @@ const pokemons = [
     id: 16,
     sprite: "https://img.pokemondb.net/sprites/black-white/normal/pidgey.png",
     name: "Pidgey",
-    type: ["Normal","Flying"],
+    type: ["Normal", "Flying"],
     weight: 1.8,
     link: "https://pokemondb.net/pokedex/pidgey",
     addedBy: "judeboachie",
   },
   {
     id: 17,
-    sprite: "https://img.pokemondb.net/sprites/black-white/normal/pidgeotto.png",
+    sprite:
+      "https://img.pokemondb.net/sprites/black-white/normal/pidgeotto.png",
     name: "Pidgeotto",
-    type: ["Normal","Flying"],
+    type: ["Normal", "Flying"],
     weight: 30.0,
     link: "https://pokemondb.net/pokedex/pidgeotto",
     addedBy: "judeboachie",
@@ -160,14 +167,15 @@ const pokemons = [
     id: 18,
     sprite: "https://img.pokemondb.net/sprites/black-white/normal/pidgeot.png",
     name: "Pidgeot",
-    type: ["Normal","Flying"],
+    type: ["Normal", "Flying"],
     weight: 39.5,
     link: "https://pokemondb.net/pokedex/pidgeot",
     addedBy: "judeboachie",
   },
   {
     id: 19,
-    sprite: "https://img.pokemondb.net/sprites/black-white/normal/rattata-f.png",
+    sprite:
+      "https://img.pokemondb.net/sprites/black-white/normal/rattata-f.png",
     name: "Rattata",
     type: ["Normal"],
     weight: 3.5,
@@ -176,7 +184,8 @@ const pokemons = [
   },
   {
     id: 20,
-    sprite: "https://img.pokemondb.net/sprites/black-white/normal/raticate-f.png",
+    sprite:
+      "https://img.pokemondb.net/sprites/black-white/normal/raticate-f.png",
     name: "Raticate",
     type: ["Normal"],
     weight: 18.5,
@@ -187,7 +196,7 @@ const pokemons = [
     id: 21,
     sprite: "https://img.pokemondb.net/sprites/black-white/normal/spearow.png",
     name: "Spearow",
-    type: ["Normal","Flying"],
+    type: ["Normal", "Flying"],
     weight: 2.0,
     link: "https://pokemondb.net/pokedex/spearow",
     addedBy: "judeboachie",
@@ -196,7 +205,7 @@ const pokemons = [
     id: 22,
     sprite: "https://img.pokemondb.net/sprites/black-white/normal/fearow.png",
     name: "Fearow",
-    type: ["Normal","Flying"],
+    type: ["Normal", "Flying"],
     weight: 38.0,
     link: "https://pokemondb.net/pokedex/fearow",
     addedBy: "judeboachie",
@@ -221,14 +230,14 @@ const pokemons = [
   },
   {
     id: 25,
-    sprite: "https://img.pokemondb.net/sprites/black-white/normal/pikachu-f.png",
+    sprite:
+      "https://img.pokemondb.net/sprites/black-white/normal/pikachu-f.png",
     name: "Pikachu",
     type: ["Electric"],
     weight: 6.0,
     link: "https://pokemondb.net/pokedex/pikachu",
     addedBy: "judeboachie",
   },
-  
 ];
 
 /* 
@@ -244,16 +253,13 @@ const LINK = "link";
 
 const fields = [ID, SPRITE, NAME, TYPE, WEIGHT, ADDED_BY];
 const table = document.getElementById("pokemonTable");
+const tbodyRef = table.getElementsByTagName("tbody")[0];
 
 pokemons
   .sort((a, b) => (a.id > b.id ? true : false))
   .forEach((pokemon, index) => {
-    if (index === 0) {
-      return;
-    }
-
     const link = pokemon[LINK];
-    const row = table.insertRow(index + 1);
+    const row = tbodyRef.insertRow(index);
 
     let innerHTML = "";
     fields.forEach((key) => {
