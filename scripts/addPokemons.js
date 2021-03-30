@@ -1,5 +1,14 @@
 /* 
   Add your pokemon to this list
+
+  Keys:
+    - id:      The id of the pokemon
+    - sprite:  The link to the pokemon sprite
+    - name:    The name of the pokemon
+    - type:    A list with the types that the pokemon inherits
+    - weight:  The weight of the pokemon in kg
+    - link:    The link to get more details about the pokemon
+    - addedBy: A github user id
 */
 const pokemons = [
   {
@@ -240,18 +249,20 @@ const pokemons = [
   },
   {
     id: 26,
-    sprite: "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/normal/larvitar.png",
+    sprite:
+      "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/normal/larvitar.png",
     name: "Larvitar",
-    type: ["Rock","Ground"],
+    type: ["Rock", "Ground"],
     weight: 72.0,
     link: "https://pokemondb.net/pokedex/larvitar",
     addedBy: "davidtothekim",
-  },  
+  },
 ];
 
 /* 
   Don't need to worry about the code below 
 */
+// The keys available in the pokemon dictionary
 const ID = "id";
 const SPRITE = "sprite";
 const NAME = "name";
@@ -260,46 +271,72 @@ const WEIGHT = "weight";
 const ADDED_BY = "addedBy";
 const LINK = "link";
 
+// The order of the keys that we want to display data in the table
 const fields = [ID, SPRITE, NAME, TYPE, WEIGHT, ADDED_BY];
+// Get the table element, and get the reference of `tbody`
 const table = document.getElementById("pokemonTable");
 const tbodyRef = table.getElementsByTagName("tbody")[0];
 
+// Loop through the list of pokemons (above)
 pokemons
-  .sort((a, b) => (a.id > b.id ? true : false))
+  // Sort based on id
+  .sort((a, b) => {
+    return a.id > b.id;
+  })
+  // forEach takes in a function, below is shorthand of a function that
+  // - parameter pokemon: A pokemon object
+  // - parameter index:   The position of the pokemon
   .forEach((pokemon, index) => {
     const link = pokemon[LINK];
+    // Add a row to the table body
     const row = tbodyRef.insertRow(index);
 
-    let innerHTML = "";
+    // Build up HTML representing the table row
+    let rowHTML = "";
+    // Go through the fields
     fields.forEach((key) => {
+      // Get the value for this key
       let value = pokemon[key];
+      let name = pokemon[NAME];
+      // Build up HTML representing the column
+      let colHTML = "";
 
+      // A switch is basically a if statement
       switch (key) {
         case SPRITE:
-          value = `<img src="${value}" alt="${name}"/>`;
+          // Create the image
+          colHTML = `<img src="${value}" alt="${name}"/>`;
           break;
         case NAME:
-          value = `<a href="${link}" target="_blank">${value}</a>`;
+          // Add the name with a link
+          colHTML = `<a href="${link}" target="_blank">${value}</a>`;
           break;
         case TYPE:
-          value = value.join(", ");
+          // Comma seperate the types
+          colHTML = value.join(", ");
           break;
         case WEIGHT:
-          value = `${value}kg`;
+          // Add kg to the end of the weight
+          colHTML = `${value}kg`;
           break;
         case ADDED_BY:
-          value = `<a href="https://github.com/${value}" target="_blank">${value}</a>`;
+          // Add a link to the user's github
+          colHTML = `<a href="https://github.com/${value}" target="_blank">${value}</a>`;
           break;
       }
 
+      // If key is ID, we want to wrap the HTML in a <th>
       if (key === ID) {
-        value = `<th scope="row">${value}</th>`;
+        colHTML = `<th scope="row">${colHTML}</th>`;
       } else {
-        value = `<td>${value}</td>`;
+        // Else, wrap it in a <td>
+        colHTML = `<td>${colHTML}</td>`;
       }
 
-      innerHTML += value;
+      // Append the row to
+      rowHTML += colHTML;
     });
 
-    row.innerHTML = innerHTML;
+    // Set the row's HTML with the created HTML
+    row.innerHTML = rowHTML;
   });
