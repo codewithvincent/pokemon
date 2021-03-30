@@ -238,6 +238,15 @@ const pokemons = [
     link: "https://pokemondb.net/pokedex/pikachu",
     addedBy: "judeboachie",
   },
+  {
+    id: 26,
+    sprite: "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/normal/larvitar.png",
+    name: "Larvitar",
+    type: ["Rock","Ground"],
+    weight: 72.0,
+    link: "https://pokemondb.net/pokedex/larvitar",
+    addedBy: "davidtothekim",
+  },  
 ];
 
 /* 
