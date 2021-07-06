@@ -257,13 +257,14 @@ const pokemons = [
     link: "https://pokemondb.net/pokedex/larvitar",
     addedBy: "davidtothekim",
   },
-  {id: 27,
-   sprite:"https://img.pokemondb.net/artwork/pupitar.jpg",
-   name: "Pupitar",
-   type: ["Rock", "Ground"],
-   weight: 152,
-   link: "https://pokemondb.net/pokedex/pupitar",
-   addedBy: "Davuong93",
+  {
+    id: 27,
+    sprite: "https://img.pokemondb.net/artwork/pupitar.jpg",
+    name: "Pupitar",
+    type: ["Rock", "Ground"],
+    weight: 152,
+    link: "https://pokemondb.net/pokedex/pupitar",
+    addedBy: "Davuong93",
   }
 ];
 
