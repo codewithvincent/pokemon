@@ -259,11 +259,20 @@ const pokemons = [
   },
   {
     id: 27,
-    sprite: "https://img.pokemondb.net/artwork/pupitar.jpg",
+    sprite: "https://img.pokemondb.net/sprites/bank/normal/pupitar.png",
     name: "Pupitar",
     type: ["Rock", "Ground"],
     weight: 152,
     link: "https://pokemondb.net/pokedex/pupitar",
+    addedBy: "Davuong93",
+  }
+  {
+    id: 28,
+    sprite: "https://img.pokemondb.net/sprites/bank/normal/tyranitar.png",
+    name: "Tyranitar",
+    type: ["Rock", "Dark"],
+    weight: 202,
+    link: "https://pokemondb.net/pokedex/tyranitar",
     addedBy: "Davuong93",
   }
 ];
