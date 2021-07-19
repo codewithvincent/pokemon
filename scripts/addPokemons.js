@@ -286,13 +286,6 @@ function makeImage(src, alt) {
   return element;
 }
 
-function makeImage(src, alt) {
-  let element = document.createElement("img");
-  element.src = src;
-  element.alt = alt;
-  return element;
-}
-
 function makeLink(href, text) {
   let element = document.createElement("a");
   element.href = href;
