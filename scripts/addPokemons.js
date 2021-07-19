@@ -259,7 +259,7 @@ const pokemons = [
   },
   {
     id: 27,
-    sprite: "https://img.pokemondb.net/artwork/pupitar.jpg",
+    sprite: "https://img.pokemondb.net/sprites/black-white/normal/pupitar.png",
     name: "Pupitar",
     type: ["Rock", "Ground"],
     weight: 152,
