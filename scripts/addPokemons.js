@@ -265,12 +265,54 @@ const pokemons = [
     weight: 152,
     link: "https://pokemondb.net/pokedex/pupitar",
     addedBy: "Davuong93",
-  }
+  },
 ];
 
 /* 
   Don't need to worry about the code below 
 */
+
+// Helper functions
+function makeParagraph(text) {
+  let element = document.createElement("p");
+  element.textContent = text
+  return element;
+}
+
+function makeImage(src, alt) {
+  let element = document.createElement("img");
+  element.src = src;
+  element.alt = alt;
+  return element;
+}
+
+function makeImage(src, alt) {
+  let element = document.createElement("img");
+  element.src = src;
+  element.alt = alt;
+  return element;
+}
+
+function makeLink(href, text) {
+  let element = document.createElement("a");
+  element.href = href;
+  element.innerText = text;
+  return element;
+}
+
+function wrapElementAsHeaderRow(element) {
+  const tdElement = document.createElement("th");
+  tdElement.scope = "row";
+  tdElement.appendChild(element)
+  return tdElement;
+}
+
+function wrapElementAsDataRow(element) {
+  const tdElement = document.createElement("td");
+  tdElement.appendChild(element)
+  return tdElement;
+}
+
 // The keys available in the pokemon dictionary
 const ID = "id";
 const SPRITE = "sprite";
@@ -297,55 +339,54 @@ pokemons
   // - parameter index:   The position of the pokemon
   .forEach((pokemon, index) => {
     const link = pokemon[LINK];
+    const name = pokemon[NAME];
     // Add a row to the table body
     const row = tbodyRef.insertRow(index);
 
-    // Build up HTML representing the table row
-    let rowHTML = "";
-    // Go through the fields
+    // The element we want to create 
+    let element = null;
+
+    // Go through the fields, to create the element
     fields.forEach((key) => {
       // Get the value for this key
       let value = pokemon[key];
-      let name = pokemon[NAME];
-      // Build up HTML representing the column
-      let colHTML = "";
 
       // A switch is basically a if statement
       switch (key) {
+        case ID:
+          element = makeParagraph(value);
+          break;
         case SPRITE:
           // Create the image
-          colHTML = `<img src="${value}" alt="${name}"/>`;
+          element = makeImage(value, name);
           break;
         case NAME:
           // Add the name with a link
-          colHTML = `<a href="${link}" target="_blank">${value}</a>`;
+          element = makeLink(link, value);
           break;
         case TYPE:
           // Comma seperate the types
-          colHTML = value.join(", ");
+          element = makeParagraph(value.join(", "));
           break;
         case WEIGHT:
           // Add kg to the end of the weight
-          colHTML = `${value}kg`;
+          element = makeParagraph(`${value}kg`);
           break;
         case ADDED_BY:
           // Add a link to the user's github
-          colHTML = `<a href="https://github.com/${value}" target="_blank">${value}</a>`;
+          element = makeLink(`https://github.com/${value}`, value);
           break;
       }
 
-      // If key is ID, we want to wrap the HTML in a <th>
+      // If key is ID, we want to make a header row
       if (key === ID) {
-        colHTML = `<th scope="row">${colHTML}</th>`;
+        element = wrapElementAsHeaderRow(element);
       } else {
-        // Else, wrap it in a <td>
-        colHTML = `<td>${colHTML}</td>`;
+        // Wrap the element as a data row
+        element = wrapElementAsDataRow(element);
       }
 
-      // Append the row to
-      rowHTML += colHTML;
+      // Add element as a child of the row
+      row.appendChild(element);
     });
-
-    // Set the row's HTML with the created HTML
-    row.innerHTML = rowHTML;
   });
